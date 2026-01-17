@@ -1,48 +1,41 @@
-# Object Detection and Model Evaluation with YOLOv8 (COCO Dataset)
+Object Detection Evaluation and Calibration with YOLOv8 (COCO Dataset)
+📌 Overview
 
-## 📌 Overview
-This project implements an advanced **object detection pipeline** using **YOLOv8** pretrained on the **COCO 2017 dataset**.  
-Beyond detection, the project focuses on **model evaluation, calibration, and error analysis** using modern benchmarking tools.  
+This project evaluates a pretrained YOLOv8 object detection model on the COCO 2017 validation dataset, with a focus on detailed performance diagnostics beyond standard accuracy metrics.
+In addition to detection quality, the project analyzes error types and confidence calibration, providing deeper insight into model reliability.
 
-## 🚀 Key Features
-- Trained & evaluated YOLOv8 on **COCO 2017 validation split**  
-- **mAP, Precision, Recall, IoU** metrics computation  
-- **Error analysis** with TIDE toolbox (localization, classification, duplicate errors)  
-- **Confidence calibration** using Expected Calibration Error (ECE) across object scales  
-- Automated results logging and visualization  
+🚀 Key Features
 
-## 🛠️ Tech Stack
-- Python, PyTorch  
-- Ultralytics YOLOv8  
-- COCO API, TIDE Toolbox  
-- NumPy, Matplotlib  
+Evaluated pretrained YOLOv8 on the COCO 2017 validation split
 
-## 📊 Results
-- Detailed evaluation across small, medium, and large objects  
-- Error classification to identify model weaknesses  
-- Calibration statistics showing prediction confidence quality  
+IoU-based matching of predicted bounding boxes with ground-truth annotations
 
----
+Standard detection metrics using COCO evaluation (mAP, IoU-based performance)
 
-# Image Stitching and Panorama Creation using SIFT & Homography
+Error analysis using TIDE to categorize detection failures (localization, classification, duplicate, background, missed detections)
 
-## 📌 Overview
-This project builds an **image stitching pipeline** that takes unorganized sets of images, clusters them into groups, and generates seamless panoramas.  
-It leverages classical **computer vision techniques** such as SIFT, feature matching, homography estimation, and blending.
+Confidence calibration analysis using Expected Calibration Error (ECE)
 
-## 🚀 Key Features
-- **Keypoint extraction** using SIFT  
-- **Feature matching** with BruteForce and FLANN-based matchers  
-- **Homography estimation** with RANSAC  
-- **Perspective warping and blending** for seamless panoramas  
-- **Clustering (K-Means, BoVW)** to separate unorganized images into panorama groups  
+Scale-wise evaluation of performance and calibration for small, medium, and large objects
 
-## 🛠️ Tech Stack
-- Python, OpenCV  
-- NumPy, Scikit-learn  
-- Matplotlib  
+Quantitative analysis and visualization of error distributions and calibration behavior
 
-## 📊 Results
-- Generated 3 complete panoramas from mixed datasets  
-- Visualized keypoints, matches, and homographies  
-- Compared matching algorithms (BruteForce vs FLANN)  
+🛠️ Tech Stack
+
+Python, PyTorch
+
+Ultralytics YOLOv8
+
+COCO API, TIDE Toolbox
+
+NumPy, Matplotlib
+
+📊 Results
+
+Identified dominant detection error modes using TIDE
+
+Observed scale-dependent performance differences across object sizes
+
+Measured calibration quality of YOLOv8 confidence scores using ECE
+
+Demonstrated that confidence reliability varies across object scales
