@@ -1,10 +1,12 @@
-Object Detection Evaluation and Calibration with YOLOv8 (COCO Dataset)
-📌 Overview
+**Object Detection Evaluation and Calibration with YOLOv8 (COCO Dataset)**
+
+
+📌 **Overview**
 
 This project evaluates a pretrained YOLOv8 object detection model on the COCO 2017 validation dataset, with a focus on detailed performance diagnostics beyond standard accuracy metrics.
 In addition to detection quality, the project analyzes error types and confidence calibration, providing deeper insight into model reliability.
 
-🚀 Key Features
+🚀 **Key Features****
 
 Evaluated pretrained YOLOv8 on the COCO 2017 validation split
 
@@ -20,7 +22,7 @@ Scale-wise evaluation of performance and calibration for small, medium, and larg
 
 Quantitative analysis and visualization of error distributions and calibration behavior
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 
 Python, PyTorch
 
@@ -30,7 +32,7 @@ COCO API, TIDE Toolbox
 
 NumPy, Matplotlib
 
-📊 Results
+📊 **Results**
 
 Identified dominant detection error modes using TIDE
 
